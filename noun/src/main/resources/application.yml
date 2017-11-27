@@ -1,0 +1,7 @@
+---
+
+server:
+  port: ${PORT:${SERVER_PORT:0}} 
+
+words: boat,book,vote,seat,backpack,partition,groundhog
+      
