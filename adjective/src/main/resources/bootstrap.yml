@@ -3,6 +3,8 @@
 spring:
   application:
     name: lab-4-adjective
+  profiles:
+    active: adjective    
   cloud:
     config:
       uri: http://localhost:8001    

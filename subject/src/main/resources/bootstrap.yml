@@ -3,6 +3,8 @@
 spring:
   application:
     name: lab-4-subject
+  profiles:
+    active: subject    
   cloud:
     config:
       uri: http://localhost:8001    

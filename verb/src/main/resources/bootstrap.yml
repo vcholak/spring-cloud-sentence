@@ -3,6 +3,8 @@
 spring:
   application:
     name: lab-4-verb
+  profiles:
+    active: verb    
   cloud:
     config:
       uri: http://localhost:8001    
