@@ -6,7 +6,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class SentenceServiceImpl implements SentenceService {
 	
-	@Autowired WordService wordService;
+	@Autowired
+	private WordService wordService;
+		
+	public void setWordService(WordService wordService) {
+		this.wordService = wordService;
+	}
 
 	@Override
 	public String buildSentence() {
