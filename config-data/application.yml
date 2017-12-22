@@ -6,31 +6,31 @@ eureka:
 
 ---
 spring:
-  profiles: subject
+  profiles: subjects
 subject:
   words: I,You,He,She,It,They,We
 
 ---
 spring:
-  profiles: verb
+  profiles: verbs
 verb:
   words: ran,knew,had,saw,bought
 
 ---
 spring:
-  profiles: article
+  profiles: articles
 article:
   words: a,the
 
 ---
 spring:
-  profiles: adjective
+  profiles: adjectives
 adjective:
   words: reasonable,leaky,suspicious,ordinary,unlikely
 
 ---
 spring:
-  profiles: noun
+  profiles: nouns
 noun:
   words: boat,book,vote,seat,backpack,partition,groundhog
 
