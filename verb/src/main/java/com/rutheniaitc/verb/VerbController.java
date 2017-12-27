@@ -1,16 +1,20 @@
 package com.rutheniaitc.verb;
 
-import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@ConfigurationProperties(prefix="verb")
 public class VerbController {
-
-	@Value("${words}")
-	private String words;
 	
+	private String words;
+		
+	public void setWords(String words) {
+		this.words = words;
+	}
+
 	@GetMapping("/")
 	public @ResponseBody String getWord() {
 	  String[] wordArray = words.split(",");
