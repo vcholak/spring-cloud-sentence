@@ -1,7 +1,7 @@
 ---
 eureka:
   instance:
-    preferIpAddress: true
+    preferIpAddress: false
   client:
     serviceUrl: 
       defaultZone: http://localhost:8010/eureka/,http://eureka-primary:8011/eureka/,http://eureka-secondary:8012/eureka/,http://eureka-tertiary:8013/eureka/
