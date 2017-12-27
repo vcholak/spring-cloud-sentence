@@ -11,3 +11,9 @@ spring:
           searchLocations: classpath:offline-repository/
 server:
   port: 8001
+
+# for simplicity, disable security when posting to /bus/refresh
+management:
+  security:
+    enabled: false
+  
