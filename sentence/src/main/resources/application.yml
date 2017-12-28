@@ -1,5 +1,11 @@
 ---
 
-server:
-  port: 8020
+# Allow thymeleaf template changes to reload:
+spring:
+  thymeleaf:
+    cache: false
+    
+# Zuul-proxied services can be found by calling /api/subject-service, /api/verb-service etc.
+zuul:
+  prefix: /api
       

@@ -16,9 +16,9 @@ public class VerbController {
 	}
 
 	@GetMapping("/")
-	public @ResponseBody String getWord() {
+	public @ResponseBody Word getWord() {
 	  String[] wordArray = words.split(",");
 	  int i = (int)Math.round(Math.random() * (wordArray.length - 1));
-	  return wordArray[i];
+	  return new Word(wordArray[i]);
 	}
 }

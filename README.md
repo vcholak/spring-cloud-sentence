@@ -18,13 +18,13 @@ To build word services, Config server must be running otherwise integration test
 
 Start the Config server. Start the Eureka server.
 
-Start all of the word services and the sentence service. 
+Start all of the word services and the sentence app (API gateway). 
 
 Since each service uses a separate port, they should be able to run side-by-side on the same computer.
 
-Check the Eureka server running at [http://localhost:8010](http://localhost:8010). Ensure that all of the word services and the sentence service are eventually listed in the Application section.
+Check the Eureka server running at [http://localhost:8010](http://localhost:8010). Ensure that all of the word services and the API gateway are eventually listed in the Application section.
 
-Open [http://localhost:8020/sentence](http://localhost:8020/sentence) to see the completed sentence. 
+Open [http://localhost:8080](http://localhost:8080) to see the completed sentence. 
 
 Refresh the sentence service URL and watch the sentence change.
 
@@ -52,9 +52,9 @@ Start 3 Eureka servers:
 
 We want to change an app configuration without restarting the app.
 
-With all servers and apps running, update one of the words properties of application.yml in the config-data directory, and push the change to the GitHub repository.
+With all servers and services running, update one of the words properties in config-data/application.yml, and push the change to the GitHub repository.
 
-Then issue the following POST request to the config server:
+Then issue the following POST request to Config server:
 
   ```
   curl -X POST http://localhost:8001/bus/refresh
@@ -65,11 +65,13 @@ Refresh the sentence service URL and watch the sentence change.
 
 5. TODO list
 
-Enable security management for Config server
+- Enable security management for Config server
 
-WARN: spring-cloud-starter-eureka is deprecated as of Spring Cloud Netflix 1.4.0, please migrate to spring-cloud-starter-netflix-eureka
+- Add API gateway for mobile clients
 
-WARN: spring-cloud-starter-eureka-server is deprecated as of Spring Cloud Netflix 1.4.0, please migrate to spring-cloud-starter-netflix-eureka-server
+- WARN: spring-cloud-starter-eureka is deprecated as of Spring Cloud Netflix 1.4.0, please migrate to spring-cloud-starter-netflix-eureka
+
+- WARN: spring-cloud-starter-eureka-server is deprecated as of Spring Cloud Netflix 1.4.0, please migrate to spring-cloud-starter-netflix-eureka-server
 
 
 
